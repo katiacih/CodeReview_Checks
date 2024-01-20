@@ -1,6 +1,4 @@
-# CodeReview_Checks
-Projeto que contem um ch3cklist de code review para determinadas linguagens
-
+# Template clean code 
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
 [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
 [![Open Source](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://opensource.org/)
@@ -15,7 +13,7 @@ Projeto que contem um ch3cklist de code review para determinadas linguagens
 ### Features
 - [x] Estrutura de diretórios
 - [x] Arquivo ReadMe
-- [ ] Conteudo de diretórios
+- [ ] Adicionar pagina inicial com opção do checklist
 - [ ] Outros
 - [ ] Outros
 - [ ] Outros
@@ -44,9 +42,9 @@ Antes de iniciar instale:
 
 - [ReactJs](https://nodejs.org/en/)
 
-NodeJS
+NodeJS v16
 
-Npm 
+Npm  8.19
 
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
 [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/). 
@@ -65,15 +63,10 @@ $ cd pasta
 $ npm install
 
 # Execute a aplicação em modo de desenvolvimento
-$ yarn start
+$ npm run dev
 
 # O servidor inciará na porta:3333 - acesse <http://localhost:3333>
 ```
-
-
-## Instalação
-
-
 
 ### Outras Dependencias
 

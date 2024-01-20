@@ -9,14 +9,19 @@
     "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "node",
-    "jsx": "react",
+    // "jsx": "react",
+    "jsx": "react-jsx",
+    "strict": true,
     "rootDir": "src",
     "baseUrl": "src",
     "paths": {
       "@/*": ["*"]
     },
     "allowJs": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "noFallthroughCasesInSwitch": true
   },
   "include": [
     "src"
