@@ -50,6 +50,28 @@ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
 [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/). 
 Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
 
+### Testando
+Para testes jest e react testing library
+
+
+### Linter
+
+Esta sendo utilizado eslint e prettier 
+
+```bash
+  npm run check
+  
+  npm run lint
+
+  npm run fix:eslint
+
+  npm run fix:prettier
+
+  npm run lint:eslint
+
+  npm run lint:prettier
+```
+
 ### 🎲 Rodando
 
 ```bash

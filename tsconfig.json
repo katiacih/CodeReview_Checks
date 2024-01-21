@@ -10,6 +10,7 @@
     "module": "esnext",
     "moduleResolution": "node",
     "jsx": "react",
+    "forceConsistentCasingInFileNames": true,
     // "jsx": "react-jsx",
     "strict": true,
     "rootDir": "src",
@@ -23,10 +24,11 @@
     "noEmit": false,
     "noFallthroughCasesInSwitch": true
   },
-  "include": [
-    "src"
-  ],
+  // "include": [
+  //   "src"
+  // ],
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.js"],
   "exclude": [
-    "src/main/test/cypress"
+    "src/main/test/cypress", "node_modules"
   ]
 }
