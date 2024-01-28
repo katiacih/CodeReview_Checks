@@ -1,4 +1,4 @@
-# Webpack react template
+# Webpack template front
 
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
 [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
@@ -93,7 +93,7 @@ More (https://reactrouter.com/web/guides/quick-start)
 
 #Autor
 
-Kátia Cibele 🚀❤️👋🏽
-Entre em contato!
+Kátia Cibele 🚀❤️👋🏽   
+Entre em contato!   
 ![Badge](https://img.shields.io/badge/katiacih-entre%20em%20contato-green)
 [![saythanks](https://img.shields.io/badge/say-thanks-ff69b4.svg)](https://saythanks.io/to/kennethreitz)
