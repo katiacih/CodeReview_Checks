@@ -22,14 +22,14 @@
 ### Demonstração
 
 🚧 🚀 Em construção... 🚧  
-Exemplo de como usar https://github.com/tgmarinho/meetapp
 Screenshots, github, imagens
+
+![gif](https://github.com/katiacih/codereview_checks/blob/main/gif-webpack-template.gif)
 
 ### 🛠 Tecnologias
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
-- [Node.js](https://nodejs.org/en/)
 - [React](https://pt-br.reactjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
 
@@ -51,22 +51,20 @@ Além disto é bom ter um editor para trabalhar com o código como [VSCode](http
 
 Para testes jest e react testing library
 
+```bash
+  npm run test
+
+  npm run test:coverage
+```
+
 ### 📝 Linter
 
 Esta sendo utilizado eslint e prettier
 
 ```bash
-  npm run check
-
   npm run lint
 
-  npm run fix:eslint
-
-  npm run fix:prettier
-
-  npm run lint:eslint
-
-  npm run lint:prettier
+  npm run lint:fix
 ```
 
 ### 🎲 Rodando
