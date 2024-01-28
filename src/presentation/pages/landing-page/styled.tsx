@@ -1,15 +1,13 @@
-import styled from 'styled-components';
-
-
+import styled from 'styled-components'
 
 export const DivContent = styled.div`
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-size: 16px;
-	font-family: "Raleway", sans-serif;
-	color: #555;
-/* 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: 'Raleway', sans-serif;
+  color: #555;
+  /* 
 ul,
 nav {
 	list-style: none;
@@ -110,5 +108,4 @@ section p {
 		padding: 50px 20px;
 	}
 } */
-
-`;
+`

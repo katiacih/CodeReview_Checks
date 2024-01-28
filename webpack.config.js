@@ -1,4 +1,5 @@
 const path = require('path');
+const ESLintPlugin = require('eslint-webpack-plugin');
 
 module.exports = {
   entry: './src/index.tsx',
@@ -15,7 +16,16 @@ module.exports = {
         test: /\.(ts|tsx)$/,
         // loader: 'file-loader',
         exclude: /node_modules/,
+        plugins: [new ESLintPlugin(options)],
         use: 'ts-loader',
+        // use: {
+        //   loader: 'babel-loader',
+        //   options: {
+        //     presets: [
+        //       ['@babel/preset-env', { targets: "defaults" }]
+        //     ]
+        //   }
+        // }
         // options: {
         //   name: '[path][name].[ext]',
         // },

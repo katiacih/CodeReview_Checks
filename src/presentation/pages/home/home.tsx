@@ -6,7 +6,7 @@ function Home() {
   return (
     <Container>
       <h1>Comece por aqui...</h1>
-      <LandingPage/>
+      <LandingPage />
     </Container>
   )
 }
