@@ -1,16 +1,14 @@
-import React from 'react';
-import { Container } from './styles';
-import ToyIcon from '@/presentation/components/icon-rocket'
- 
-function Home(){
+import React from 'react'
+import { Container } from './styles'
+import LandingPage from '../landing-page/landing'
+
+function Home() {
   return (
     <Container>
       <h1>Comece por aqui...</h1>
-      <div>
-        <ToyIcon />
-      </div>
+      <LandingPage/>
     </Container>
   )
 }
 
-export default Home;
+export default Home

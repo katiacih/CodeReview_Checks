@@ -1,8 +1,11 @@
-import { styled } from '@stitches/react';
+import styled from 'styled-components';
 
-export const Container = styled('div', {
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'space-between',
-  minHeight: '100vh'
-})
+
+export const Container = styled.div`
+  display: flex,
+  flex-direction: column,
+  justify-content: space-between,
+  min-height: 100vh,
+  position: relative,
+`;
+

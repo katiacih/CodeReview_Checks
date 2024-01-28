@@ -1,16 +1,17 @@
-# Template clean code 
+# Webpack react template
+
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
 [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
 [![Open Source](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://opensource.org/)
 
-
 <!--te-->
 
 ## Status
-🚧  🚀 Em construção...  🚧
 
+🚧 🚀 Em construção... 🚧
 
 ### Features
+
 - [x] Estrutura de diretórios
 - [x] Arquivo ReadMe
 - [ ] Adicionar pagina inicial com opção do checklist
@@ -18,14 +19,11 @@
 - [ ] Outros
 - [ ] Outros
 
+### Demonstração
 
-
-### Demonstração 
-
-🚧   🚀 Em construção...  🚧   
+🚧 🚀 Em construção... 🚧  
 Exemplo de como usar https://github.com/tgmarinho/meetapp
 Screenshots, github, imagens
-
 
 ### 🛠 Tecnologias
 
@@ -35,8 +33,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [React](https://pt-br.reactjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
 
-
-### Pré-requisitos
+### 👾 Pré-requisitos
 
 Antes de iniciar instale:
 
@@ -44,23 +41,23 @@ Antes de iniciar instale:
 
 NodeJS v16
 
-Npm  8.19
+Npm 8.19
 
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
-[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/). 
+[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/).
 Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
 
-### Testando
+### 📑 Testando
+
 Para testes jest e react testing library
 
+### 📝 Linter
 
-### Linter
-
-Esta sendo utilizado eslint e prettier 
+Esta sendo utilizado eslint e prettier
 
 ```bash
   npm run check
-  
+
   npm run lint
 
   npm run fix:eslint
@@ -76,7 +73,7 @@ Esta sendo utilizado eslint e prettier
 
 ```bash
 # Clone este repositório
-$ git clone 
+$ git clone
 
 # Acesse a pasta do projeto no terminal/cmd
 $ cd pasta
@@ -90,16 +87,15 @@ $ npm run dev
 # O servidor inciará na porta:3333 - acesse <http://localhost:3333>
 ```
 
-### Outras Dependencias
+### 🔗Outras Dependencias
 
-React-Router-Dom   
+React-Router-Dom  
 npm install @types/react-router-dom
 More (https://reactrouter.com/web/guides/quick-start)
 
+#Autor
 
-#Autor   
-
-Kátia Cibele 🚀❤️👋🏽 
+Kátia Cibele 🚀❤️👋🏽
 Entre em contato!
 ![Badge](https://img.shields.io/badge/katiacih-entre%20em%20contato-green)
 [![saythanks](https://img.shields.io/badge/say-thanks-ff69b4.svg)](https://saythanks.io/to/kennethreitz)
