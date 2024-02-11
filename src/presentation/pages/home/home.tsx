@@ -1,13 +1,17 @@
 import React from 'react'
 import { Container } from './styles'
-import LandingPage from '../landings-page/lets-party/landing'
+import LetsParty from '../landings-page/lets-party/LetsParty'
+import Menu from '../../../main/menu/menu'
 
 function Home() {
   return (
+    <div>
+    <Menu />
     <Container>
-      <h1>Comece por aqui...</h1>
-      <LandingPage />
+      <LetsParty />
     </Container>
+
+    </div>    
   )
 }
 

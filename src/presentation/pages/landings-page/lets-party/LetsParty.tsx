@@ -6,7 +6,7 @@ import SectionPackage from './content/section-packge'
 import Footer from './footer/footer'
 import { DivContent } from './styled'
 
-function LandingPage() {
+function LetsParty() {
   return (
     <DivContent>
       <Header />
@@ -18,4 +18,4 @@ function LandingPage() {
   )
 }
 
-export default LandingPage
+export default LetsParty;
