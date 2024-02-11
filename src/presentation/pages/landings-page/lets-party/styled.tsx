@@ -17,8 +17,6 @@ nav {
     opacity: 0.75;
     color: #fff;
   }
-
-
   
 a {
 	text-decoration: none;
