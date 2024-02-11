@@ -4,13 +4,23 @@ import { MenuBar } from './styles';
 
 const MENU_ITENS = [
     {
-        title: 'bases',
-        description: 'bases de tese',
+        title: 'Life is a Party',
+        description: 'Landing page - Unmissable Adventure Tours With Your Friends ',
+        link: 'lets-party'
+    },
+    {
+        title: 'Landing Page 2 - playground',
+        description: 'Landing page - Testing others landing pages examples',
         link: '/teste'
     },
     {
-        title: 'eyes',
-        description: 'eyes de tese',
+        title: 'Landing Page 3 - playground',
+        description: 'Landing page - Testing others landing pages examples',
+        link: '/teste'
+    },
+    {
+        title: 'Landing Page 4 - playground',
+        description: 'Landing page - Testing others landing pages examples',
         link: '/teste'
     }
 ]
