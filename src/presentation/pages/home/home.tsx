@@ -1,13 +1,15 @@
 import React from 'react'
-import { Container } from './styles'
-import LandingPage from '../landing-page/landing'
+import Menu from '../../../main/menu/menu'
+import LandingContent from './landing-content'
 
 function Home() {
   return (
-    <Container>
-      <h1>Comece por aqui...</h1>
-      <LandingPage />
-    </Container>
+    <div>
+      <LandingContent title='teste' isShowBreacrumbs={false}>
+        <Menu />
+      </LandingContent>
+
+    </div>    
   )
 }
 

@@ -8,7 +8,6 @@ const fadeIn = keyframes`
 
 export const HeaderContent = styled.div`
   position: absolute;
-  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;

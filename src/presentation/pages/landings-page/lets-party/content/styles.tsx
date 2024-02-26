@@ -81,16 +81,16 @@ export const DestinationTitle = styled.h3`
   font:
     bold 48px 'Amatic SC',
     sans-serif;
-  margin-bottom: 30px;
+  padding-bottom: 30px;
   text-align: center;
   color: #555;
 `
 
-export const Destinationparagrapj = styled.p`
+export const Destinationparagrapj = styled.span`
   max-width: 775px;
   line-height: 2;
   padding: 0 20px;
-  margin-bottom: 30px;
+  padding-bottom: 30px;
   text-align: center;
   color: #555;
 `
@@ -172,6 +172,7 @@ export const DestinationHR = styled.hr`
   background-color: #e07e7b;
   border: 0;
   margin-bottom: 50px;
+  margin-top: 10px;
 `
 
 // packages
