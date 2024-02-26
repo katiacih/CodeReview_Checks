@@ -11,7 +11,7 @@ export const Container = styled.div`
     margin-bottom: 36px;
 `;
 
-export const ContainerTitle = styled.div`
+export const ContainerMenuTitle = styled.div`
   display: flex;
   flex-direction: column;
   width: 260px;
@@ -19,8 +19,11 @@ export const ContainerTitle = styled.div`
     margin-bottom: 11px;
   }
   hr {
-    border-bottom: 1px solid green;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: ${props => props.theme.interactive.link.hover};
     width: 100%;
+  }
     margin-bottom: 38px;
   }
   span {
@@ -44,14 +47,14 @@ export const ContainerThumb = styled.div<{ $thumb?: string; }>`
     height: 200px;
 
     a {
-      color: green;
+      color: ${props => props.theme.interactive.link.color};
       font-size: 1.5rem;
     }
 
     a:hover {
       cursor: pointer;
       text-decoration: underline;
-      color: #85b585
+      color: ${props => props.theme.interactive.link.hover};
     }
 }`;
 // onst Button = styled.button<{ $primary?: boolean; }>`
