@@ -47,6 +47,9 @@
     "moduleResolution": "node", // Resolve modules using Node.js style
     "isolatedModules": true, // Unconditionally emit imports for unresolved files
     "resolveJsonModule": true, // Include modules imported with .json extension
+    "allowImportingTsExtensions": true, // Allow importing .ts files
+    "typeRoots": ["./node_modules/@types", "./src/types", "./index.d.ts"], // List of folders to include type definitions from
+    "baseUrl": "./src", // Base directory to resolve non-absolute module names
     "noEmit": true, // Do not emit output (meaning do not compile code, only perform type checking)
     "jsx": "react", // Support JSX in .tsx files
     "sourceMap": true, // Generate corrresponding .map file
