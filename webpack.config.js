@@ -8,27 +8,26 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.json'],
+    extensions: ['.ts', '.tsx', '.js', '.json', '.png', '.jpg', '.gif'],
   },
   module: {
     rules: [
       {
-        test: /\.(ts|tsx)$/,
-        // loader: 'file-loader',
+        test: /\.(ts|tsx|png)$/,
         exclude: /node_modules/,
-        // plugins: [new ESLintPlugin(options)],
         use: 'ts-loader',
-        // use: {
-        //   loader: 'babel-loader',
-        //   options: {
-        //     presets: [
-        //       ['@babel/preset-env', { targets: "defaults" }]
-        //     ]
-        //   }
-        // }
-        // options: {
-        //   name: '[path][name].[ext]',
-        // },
+      },
+      {
+        test: /\.(png|jpg|gif)$/i,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192,
+              name: 'images/[name].[hash:8].[ext]',
+            },
+          },
+        ],
       },
     ],
   },

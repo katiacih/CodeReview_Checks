@@ -10,10 +10,16 @@
     "forceConsistentCasingInFileNames": true,
     "module": "esnext",
     "moduleResolution": "node",
-    "resolveJsonModule": true,
+    "resolveJsonModule": false,
     "isolatedModules": true,
-    "jsx": "react"
+    "experimentalDecorators": true,
+    "jsx": "react",
+    "baseUrl": "./src",
+    "allowImportingTsExtensions": false,
+    "typeRoots": ["./node_modules/@types", "./src/types", "./index.d.ts"],
+    "types": ["node"]
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "include":  ["src"],
+  // "include":  ["src/**/*.tsx", "src/**/*.ts", "src/**/*.json", "src/**/*.png", "src/**/*.jpg", "src/**/*.jpeg", "src/**/*.gif", "src/**/*.svg"],
   "exclude": ["node_modules"]
 }
