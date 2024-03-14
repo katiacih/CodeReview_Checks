@@ -1,25 +1,65 @@
+// {
+//   "compilerOptions": {
+//     "module": "commonjs",
+//     // "module": "esnext",
+//     "target": "es5",
+//     "lib": ["dom", "dom.iterable", "esnext"],
+//     "allowJs": true,
+//     "skipLibCheck": true,
+//     "esModuleInterop": true,
+//     "allowSyntheticDefaultImports": true,
+//     "strict": true,
+//     "forceConsistentCasingInFileNames": true,
+//     "moduleResolution": "node",
+//     "resolveJsonModule": false,
+//     "isolatedModules": true,
+//     "experimentalDecorators": true,
+//     "jsx": "react",
+//     "baseUrl": "./src",
+//     "noEmit": true,
+//     "allowImportingTsExtensions": false,
+//     "typeRoots": ["./node_modules/@types", "./src/types", "./index.d.ts"],
+//     "types": ["node"],
+//     "rootDir": "src",
+//     "noImplicitReturns": true,
+//     "noImplicitThis": true,
+//     "noImplicitAny": true,
+//     "strictNullChecks": true
+//   },
+//   "include": ["src/**/*", "tests/**/*", "typings/**/*", "index.d.ts"],
+//   "exclude": ["node_modules"]
+// }
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": false,
-    "isolatedModules": true,
-    "experimentalDecorators": true,
-    "jsx": "react",
-    "baseUrl": "./src",
-    "allowImportingTsExtensions": false,
-    "typeRoots": ["./node_modules/@types", "./src/types", "./index.d.ts"],
-    "types": ["node"]
+    "target": "es5", // Specify ECMAScript target version
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ], // List of library files to be included in the compilation
+    "allowJs": true, // Allow JavaScript files to be compiled
+    "skipLibCheck": true, // Skip type checking of all declaration files
+    "esModuleInterop": true, // Disables namespace imports (import * as fs from "fs") and enables CJS/AMD/UMD style imports (import fs from "fs")
+    "allowSyntheticDefaultImports": true, // Allow default imports from modules with no default export
+    "strict": true, // Enable all strict type checking options
+    "forceConsistentCasingInFileNames": true, // Disallow inconsistently-cased references to the same file.
+    "module": "esnext", // Specify module code generation
+    "moduleResolution": "node", // Resolve modules using Node.js style
+    "isolatedModules": true, // Unconditionally emit imports for unresolved files
+    "resolveJsonModule": true, // Include modules imported with .json extension
+    "noEmit": true, // Do not emit output (meaning do not compile code, only perform type checking)
+    "jsx": "react", // Support JSX in .tsx files
+    "sourceMap": true, // Generate corrresponding .map file
+    "declaration": true, // Generate corresponding .d.ts file
+    "noUnusedLocals": true, // Report errors on unused locals
+    "noUnusedParameters": true, // Report errors on unused parameters
+    "incremental": true, // Enable incremental compilation by reading/writing information from prior compilations to a file on disk
+    "noFallthroughCasesInSwitch": true // Report errors for fallthrough cases in switch statement
   },
-  "include":  ["src"],
-  // "include":  ["src/**/*.tsx", "src/**/*.ts", "src/**/*.json", "src/**/*.png", "src/**/*.jpg", "src/**/*.jpeg", "src/**/*.gif", "src/**/*.svg"],
-  "exclude": ["node_modules"]
+  "include": [
+    "src/**/*", // *** The files TypeScript should type check ***
+    "**/*.ts",
+    "**/*.d.ts"
+  ],
+  "exclude": ["node_modules", "build"] // *** The files to not type check ***
 }
