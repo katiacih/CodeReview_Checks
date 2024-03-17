@@ -76,7 +76,6 @@ module.exports = (env) => {
                 plugins: [
                   '@babel/plugin-transform-class-properties',
                   '@babel/plugin-transform-runtime',
-                  isDevelopment && require.resolve('react-refresh/babel'),
                 ].filter(Boolean),
               },
             },

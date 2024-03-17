@@ -1,8 +1,9 @@
+import React from 'react';
 import LandingContent from '../../home/landing-content'
 import { BoxText, SectionMySoupsIngridients, SectionMySoupsRecipes, SectionMySoupsResult, Title } from './styled';
 const img1 = require('./assets/panela-2.png');
 
-function MySoups() {
+export default function MySoups() {
 const title = `Aquecendo a anos`;
 return (
     <LandingContent title={title}>
@@ -31,5 +32,3 @@ return (
     </LandingContent>
 )
 }
-
-export default MySoups;

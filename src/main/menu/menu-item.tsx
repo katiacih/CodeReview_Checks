@@ -5,9 +5,8 @@ type Props = {
     title: string;
     description: string;
     url: string
-    thumbPathRelative?: string
 }
-export default function MenuItem({ title, description, url, thumbPathRelative } : Props) {
+export default function MenuItem({ title, description, url } : Props) {
     return (
         <Container>
             <ContainerMenuTitle>
