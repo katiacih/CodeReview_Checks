@@ -7,7 +7,7 @@ type Props = {
   title: string;
   isShowBreacrumbs?: boolean
 }
-function LandingContent({ children, title, isShowBreacrumbs = true }: Props) {
+function LandingContent({ children, title, isShowBreacrumbs = true }: Readonly<Props>) {
   return (
     <div>
         <HeaderLandingPageContent>

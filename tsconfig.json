@@ -1,68 +1,39 @@
-// {
-//   "compilerOptions": {
-//     "module": "commonjs",
-//     // "module": "esnext",
-//     "target": "es5",
-//     "lib": ["dom", "dom.iterable", "esnext"],
-//     "allowJs": true,
-//     "skipLibCheck": true,
-//     "esModuleInterop": true,
-//     "allowSyntheticDefaultImports": true,
-//     "strict": true,
-//     "forceConsistentCasingInFileNames": true,
-//     "moduleResolution": "node",
-//     "resolveJsonModule": false,
-//     "isolatedModules": true,
-//     "experimentalDecorators": true,
-//     "jsx": "react",
-//     "baseUrl": "./src",
-//     "noEmit": true,
-//     "allowImportingTsExtensions": false,
-//     "typeRoots": ["./node_modules/@types", "./src/types", "./index.d.ts"],
-//     "types": ["node"],
-//     "rootDir": "src",
-//     "noImplicitReturns": true,
-//     "noImplicitThis": true,
-//     "noImplicitAny": true,
-//     "strictNullChecks": true
-//   },
-//   "include": ["src/**/*", "tests/**/*", "typings/**/*", "index.d.ts"],
-//   "exclude": ["node_modules"]
-// }
 {
   "compilerOptions": {
-    "target": "es5", // Specify ECMAScript target version
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ], // List of library files to be included in the compilation
+    // "module": "esnext", // Specify module code generation
+    "module": "commonjs",
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],  // List of library files to be included in the compilation
     "allowJs": true, // Allow JavaScript files to be compiled
-    "skipLibCheck": true, // Skip type checking of all declaration files
+    "skipLibCheck": true,  // Skip type checking of all declaration files
     "esModuleInterop": true, // Disables namespace imports (import * as fs from "fs") and enables CJS/AMD/UMD style imports (import fs from "fs")
     "allowSyntheticDefaultImports": true, // Allow default imports from modules with no default export
     "strict": true, // Enable all strict type checking options
     "forceConsistentCasingInFileNames": true, // Disallow inconsistently-cased references to the same file.
-    "module": "esnext", // Specify module code generation
-    "moduleResolution": "node", // Resolve modules using Node.js style
-    "isolatedModules": true, // Unconditionally emit imports for unresolved files
-    "resolveJsonModule": true, // Include modules imported with .json extension
-    "allowImportingTsExtensions": true, // Allow importing .ts files
-    "typeRoots": ["./node_modules/@types", "./src/types", "./index.d.ts"], // List of folders to include type definitions from
-    "baseUrl": "./src", // Base directory to resolve non-absolute module names
-    "noEmit": true, // Do not emit output (meaning do not compile code, only perform type checking)
+    "moduleResolution": "node",   // Resolve modules using Node.js style
+    "resolveJsonModule": false,
+    "isolatedModules": true,  // Unconditionally emit imports for unresolved files
+    "experimentalDecorators": true,
     "jsx": "react", // Support JSX in .tsx files
+    "baseUrl": "./src",// Base directory to resolve non-absolute module names
+    "noEmit": false, // Do not emit output (meaning do not compile code, only perform type checking)
+    "typeRoots": ["./node_modules/@types", "./src/types", "./index.d.ts"],
+    "strictNullChecks": true,
+    "noImplicitAny": false,
     "sourceMap": true, // Generate corrresponding .map file
-    "declaration": true, // Generate corresponding .d.ts file
-    "noUnusedLocals": true, // Report errors on unused locals
-    "noUnusedParameters": true, // Report errors on unused parameters
-    "incremental": true, // Enable incremental compilation by reading/writing information from prior compilations to a file on disk
-    "noFallthroughCasesInSwitch": true // Report errors for fallthrough cases in switch statement
+    // "allowImportingTsExtensions": true, // Allow importing .ts files, just use with emit : true
+    // "rootDir": "src",
+    // "noImplicitReturns": true,
+    // "noImplicitThis": true,
+//     "jsx": "react",
+//     "sourceMap": true, // Generate corrresponding .map file
+//     "declaration": true, // Generate corresponding .d.ts file
+//     "noUnusedLocals": true, // Report errors on unused locals
+//     "noUnusedParameters": true, // Report errors on unused parameters
+//     "incremental": true, // Enable incremental compilation by reading/writing information from prior compilations to a file on disk
+//     "noFallthroughCasesInSwitch": true // Report errors for fallthrough cases in switch statement
+
   },
-  "include": [
-    "src/**/*", // *** The files TypeScript should type check ***
-    "**/*.ts",
-    "**/*.d.ts"
-  ],
-  "exclude": ["node_modules", "build"] // *** The files to not type check ***
+  "include": ["src/**/*",  "**/*.ts","tests/**/*",  "**/*.d.ts", "typings/**/*", "index.d.ts"],
+  "exclude": ["node_modules"]
 }

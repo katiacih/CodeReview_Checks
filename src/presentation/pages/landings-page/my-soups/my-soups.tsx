@@ -1,7 +1,8 @@
 import React from 'react'
 import LandingContent from '../../home/landing-content'
 import { BoxText, SectionMySoupsIngridients, SectionMySoupsRecipes, SectionMySoupsResult, Title } from './styled';
-import img1 from './assets/panela-2.png';
+const img1 = require('./assets/panela-2.png');
+// import img1 from './assets/panela-2.png';
 
 function MySoups() {
   const title = `Aquecendo a anos`;

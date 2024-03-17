@@ -6,7 +6,6 @@ import MySoups from '../landings-page/my-soups/my-soups'
 function Home() {
   return (
     <div>
-      
       <LandingContent title='teste' isShowBreacrumbs={false}>
         <Menu />
       </LandingContent>
