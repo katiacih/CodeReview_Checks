@@ -4,6 +4,8 @@ import React from 'react';
 
 export default function ErrorNotFound() {
     const error: any = useRouteError();
+    const status: string = error?.statusText as unknown as string || '500';
+    const message: string = error?.message  as unknown as string  || 'Erro!';
 
     return (
         <div>
@@ -11,9 +13,8 @@ export default function ErrorNotFound() {
             <h3>404</h3>
             <span>That's an error.</span>
             <span>The requested URL was not found.</span>
-            <p>
-                <i>{error.statusText || error.message}</i>
-            </p>
+            <p>{status}</p>
+            <p><i>{message}</i></p>
         </div>
     )
 }

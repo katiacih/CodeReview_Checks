@@ -1,19 +1,28 @@
 {
   "compilerOptions": {
+    // "module": "esnext", // Specify module code generation
+    "module": "commonjs",
+    "jsx": "react-jsx", // Support JSX in .tsx files
     "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "react"
+    "outDir": "./dist/", // Redirect output structure to the directory
+    "lib": ["dom", "dom.iterable", "esnext"],  // List of library files to be included in the compilation
+    "experimentalDecorators": true,
+    "allowJs": true, // Allow JavaScript files to be compiled
+    "skipLibCheck": true,  // Skip type checking of all declaration files
+    "esModuleInterop": true, // Disables namespace imports (import * as fs from "fs") and enables CJS/AMD/UMD style imports (import fs from "fs")
+    "allowSyntheticDefaultImports": true, // Allow default imports from modules with no default export
+    "strict": true, // Enable all strict type checking options
+    "forceConsistentCasingInFileNames": true, // Disallow inconsistently-cased references to the same file.
+    "moduleResolution": "node",   // Resolve modules using Node.js style
+    "resolveJsonModule": false,
+    "isolatedModules": false,  // Unconditionally emit imports for unresolved files
+    "baseUrl": "./src",// Base directory to resolve non-absolute module names
+    "noEmit": false, // Do not emit output (meaning do not compile code, only perform type checking)
+    "typeRoots": ["./node_modules/@types", "./src/types", "./index.d.ts"],
+    "strictNullChecks": false,
+    "noImplicitAny": false,
+    "sourceMap": true, // Generate corrresponding .map file
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx"],
-  "exclude": ["node_modules"]
+  "include": ["./src/**/*"],
+  "exclude": ["node_modules", "build", "dist"]
 }
