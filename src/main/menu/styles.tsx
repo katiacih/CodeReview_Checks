@@ -57,11 +57,4 @@ export const ContainerThumb = styled.div<{ $thumb?: string; }>`
       color: ${props => props.theme.interactive.link.hover};
     }
 }`;
-// onst Button = styled.button<{ $primary?: boolean; }>`
-//   /* Adapt the colors based on primary prop */
-//   background: ${props => props.$primary ? "#BF4F74" : "white"};
-//   color: ${props => props.$primary ? "white" : "#BF4F74"};
-
-// `;
-
 

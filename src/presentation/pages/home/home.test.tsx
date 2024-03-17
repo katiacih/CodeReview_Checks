@@ -1,6 +1,6 @@
 import React from 'react'
 import { render } from '@testing-library/react'
-import Home from './home'
+import Home from '../home/home'
 import '@testing-library/jest-dom'
 
 /**

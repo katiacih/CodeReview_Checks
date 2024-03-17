@@ -7,7 +7,7 @@ import {
   NavLinkItem,
 } from './styles'
 
-function Header() {
+export function Header() {
   return (
     <HeaderContent>
       <HeaderTitle>
@@ -27,5 +27,3 @@ function Header() {
     </HeaderContent>
   )
 }
-
-export default Header

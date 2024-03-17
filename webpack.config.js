@@ -2,43 +2,88 @@
 const path = require('path')
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin')
 
-module.exports = {
-  entry: './src/index.tsx',
-  devtool: 'inline-source-map',
-  output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist'),
-  },
-  resolve: {
-    extensions: ['.ts', '.tsx', '.js'],
-    extensionAlias: {
-      '.js': ['.js', '.ts'],
-      '.cjs': ['.cjs', '.cts'],
-      '.mjs': ['.mjs', '.mts'],
+module.exports = (env) => {
+  const NODE_ENV = env.NODE_ENV || 'development'
+  const isDevelopment = NODE_ENV !== 'production'
+
+  process.stdout.write(
+    `${'\n\n***-------------------------------------------***\n'}
+    BUILD start for environment: ${NODE_ENV}
+    ${'\n***-------------------------------------------***\n\n\n'}`,
+  )
+
+  return {
+    entry: './src/index.tsx',
+    devtool: 'inline-source-map',
+    output: {
+      filename: 'bundle.js',
+      path: path.resolve(__dirname, 'dist'),
     },
-  },
-  module: {
-    rules: [
-      {
-        test: /\.(ts|tsx|png)$/,
-        exclude: /node_modules/,
-        use: 'ts-loader',
+    devServer: {
+      static: './dist',
+      hot: true,
+    },
+    resolve: {
+      extensions: ['.ts', '.tsx', '.js'],
+      extensionAlias: {
+        '.js': ['.js', '.ts'],
+        '.cjs': ['.cjs', '.cts'],
+        '.mjs': ['.mjs', '.mts'],
       },
-      {
-        // test: /\.(png|jpg|gif)$/i,
-        test: /\.([cm]?ts|tsx)$/,
-        loader: 'ts-loader',
-        // use: [
-        //   {
-        //     loader: 'url-loader',
-        //     options: {
-        //       limit: 8192,
-        //       name: 'images/[name].[hash:8].[ext]',
-        //     },
-        //   },
-        // ],
+      alias: {
+        '@utils': path.resolve(__dirname, './src/utils'),
+        '@presentation': path.resolve(__dirname, './src/presentation'),
       },
-    ],
-  },
-  plugins: [new TsconfigPathsPlugin({ configFile: 'tsconfig.json' })],
+    },
+    module: {
+      rules: [
+        {
+          test: /\.(ts|tsx|png)$/,
+          use: 'ts-loader',
+        },
+        {
+          test: /\.(png|woff|woff2|eot|ttf)$/,
+          use: 'url-loader',
+        },
+        {
+          test: /\.svg$/i,
+          type: 'asset',
+          resourceQuery: /url/,
+        },
+        {
+          test: /\.svg$/i,
+          issuer: /\.[jt]sx?$/,
+          resourceQuery: { not: [/url/] },
+          use: ['@svgr/webpack'],
+        },
+        {
+          test: /\.[tj]s(x?)$/,
+          exclude: /node_modules/,
+          use: [
+            {
+              loader: 'babel-loader',
+              options: {
+                presets: [
+                  '@babel/preset-env',
+                  [
+                    '@babel/preset-react',
+                    {
+                      runtime: 'automatic',
+                    },
+                  ],
+                  '@babel/preset-typescript',
+                ],
+                plugins: [
+                  '@babel/plugin-transform-class-properties',
+                  '@babel/plugin-transform-runtime',
+                  isDevelopment && require.resolve('react-refresh/babel'),
+                ].filter(Boolean),
+              },
+            },
+          ],
+        },
+      ],
+    },
+    plugins: [new TsconfigPathsPlugin({ configFile: 'tsconfig.json' })],
+  }
 }

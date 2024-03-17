@@ -5,7 +5,6 @@ const fadeIn = keyframes`
     opacity: 1;
   }
 `
-
 export const HeaderContent = styled.div`
   position: absolute;
   display: flex;
@@ -16,7 +15,6 @@ export const HeaderContent = styled.div`
   opacity: 0;
   color: #fff;
   z-index: 2;
-
   @media (max-width: 800px) {
     padding: 20px 50px;
     flex-direction: column;

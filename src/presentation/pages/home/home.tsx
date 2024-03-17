@@ -3,7 +3,7 @@ import Menu from '../../../main/menu/menu'
 import LandingContent from './landing-content'
 import MySoups from '../landings-page/my-soups/my-soups'
 
-function Home() {
+export default function Home() {
   return (
     <div>
       <LandingContent title='teste' isShowBreacrumbs={false}>
@@ -13,5 +13,3 @@ function Home() {
     </div>    
   )
 }
-
-export default Home

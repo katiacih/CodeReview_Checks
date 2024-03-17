@@ -1,15 +1,11 @@
 import React from 'react';
-// import Home from '../presentation/pages/home/home';
-import Menu from './menu/menu.tsx';
+import  Menu from './menu/menu';
 
-const App: React.FC = () => {
+export function App() {
   return (
     <div>
       <Menu />
-      {/* <Home/> */}
     </div>
   )
   
 };
-
-export default App;
