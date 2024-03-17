@@ -1,11 +1,14 @@
 import React from 'react'
 import LandingContent from '../../home/landing-content';
+import { AireHero } from './styled';
 
 function AirePage() {
   const title = `Aire`;
   return (
     <LandingContent title={title}>
-      <div>AIRE</div>
+      <AireHero>
+        <h1>AIRE</h1>
+       </AireHero>
       <div>circles with colors</div>
       <div>tow columns</div>
       <div>typo</div>

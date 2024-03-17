@@ -14,9 +14,9 @@ const MENU_ITENS = [
         link: '/teste'
     },
     {
-        title: 'Landing Page 3 - playground',
-        description: 'Landing page - Testing others landing pages examples',
-        link: '/teste'
+        title: 'Aire Page',
+        description: 'Brand identity mood board inspiration',
+        link: '/aire'
     },
     {
         title: 'Landing Page 4 - playground',
