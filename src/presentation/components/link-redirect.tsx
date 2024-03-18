@@ -6,7 +6,7 @@ type Props = {
   to: string;
 };
 
-function LinkRedirect({label,to, ...props} : Props) {
+function LinkRedirect({label,to, ...props} : Props): JSX.Element {
   return (
    <LinkRedirectRR to={to}>
     <span>{label}</span>

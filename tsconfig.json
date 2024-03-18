@@ -15,5 +15,12 @@
     "jsx": "react"
   },
   "include": ["src/**/*.ts", "src/**/*.tsx", "src/declaration.d.ts"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules"],
+  "baseUrl": ".", // Add this line
+  "paths": {
+    "@": ["src/*"], // Add this line
+    "@components": ["src/components"],
+    "@presentation/*": ["src/presentation/*"],
+    "@main/*": ["src/main/*"],
+  }
 }

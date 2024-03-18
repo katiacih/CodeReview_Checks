@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, ContainerMenuTitle, ContainerThumb } from "./styles";
-import LinkRedirect from '../components/link-redirect';
+import LinkRedirect from "@components/link-redirect";
 import img1 from './letspartythumb.png'
 
 type Props = {
