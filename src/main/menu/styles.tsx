@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components'
 
 export const MenuBar = styled.div`
@@ -31,37 +32,44 @@ export const ContainerMenuTitle = styled.div`
   }
 `;
 
-export const ContainerThumb = styled.div<{ $thumb?: string; }>`
+export const DetailItemMenu = styled.div`
     justify-content: center;
     display: flex;
     align-items: center;
     flex-direction: column;
     padding: 16px;
+    min-width: 320px;
+    height: 200px;
+}`;
+
+
+export const ContainerThumb = styled.div<{ $thumb?: string; }>`
+    padding: 16px;
     border: 1px solid #d9d9d9;
     background-color: #d9d9d9; 
-    background-image: url("./letspartythumb.png");
+    background-image: url(${props => props.$thumb});
     background-repeat: no-repeat, repeat;
     background-size: cover;
     border-radius: 4px;
-    min-width: 320px;
-    height: 200px;
-
-    a {
-      color: ${props => props.theme.interactive.link.color};
-      font-size: 1.5rem;
-    }
-
-    a:hover {
-      cursor: pointer;
-      text-decoration: underline;
-      color: ${props => props.theme.interactive.link.hover};
-    }
+    min-width: 280px;
+    height: 160px;
 }`;
-// onst Button = styled.button<{ $primary?: boolean; }>`
-//   /* Adapt the colors based on primary prop */
-//   background: ${props => props.$primary ? "#BF4F74" : "white"};
-//   color: ${props => props.$primary ? "white" : "#BF4F74"};
 
-// `;
-
+export const LinkRedirect = styled(Link)`
+ color:white;
+ font-size: x-large;
+ font-family: Arial, Helvetica, sans-serif;
+ text-decoration: none;
+ margin: 10px;
+  &:hover,
+  &:focus{
+      color: blue;
+  };
+  &:active{
+      color: red;
+  };
+  @media(max-width: 700px) {
+          display: none;
+  }
+ `
 

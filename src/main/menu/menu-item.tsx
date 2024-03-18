@@ -1,6 +1,8 @@
 import React from "react";
 import { Container, ContainerMenuTitle, ContainerThumb } from "./styles";
-import { Link } from "react-router-dom";
+import LinkRedirect from '../components/link-redirect';
+import img1 from './letspartythumb.png'
+
 type Props = {
     title: string;
     description: string;
@@ -15,10 +17,10 @@ export default function MenuItem({ title, description, url, thumbPathRelative } 
                 <hr />
                 <span>{description}</span>
             </ContainerMenuTitle>
-            <ContainerThumb>
-                <h1>🗅</h1>
-                <Link to={url}>Ver página</Link>
-            </ContainerThumb>
+            <div>
+                <ContainerThumb $thumb={img1} />
+                <LinkRedirect to={url} label='Ver página' />
+            </div>
         </Container>
     )
 }
