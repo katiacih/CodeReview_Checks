@@ -47,8 +47,6 @@ export const ContainerThumb = styled.div<{ $thumb?: string; }>`
     padding: 16px;
     border: 1px solid #d9d9d9;
     background-color: #d9d9d9; 
-    background-image: url(${props => props.$thumb});
-    background-repeat: no-repeat, repeat;
     background-size: cover;
     border-radius: 4px;
     min-width: 280px;
