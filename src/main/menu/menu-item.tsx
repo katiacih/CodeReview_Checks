@@ -1,11 +1,13 @@
 import React from "react";
-import { Container, ContainerMenuTitle, ContainerThumb } from "./styles";
-import { Link } from "react-router-dom";
+import { Container, ContainerMenuTitle, ContainerThumb } from "./styled";
+import LinkRedirect from '../../presentation/components/link-redirect';
+
+
 type Props = {
     title: string;
     description: string;
     url: string
-    thumbPathRelative?: string
+    thumbPathRelative: string
 }
 export default function MenuItem({ title, description, url, thumbPathRelative } : Props) {
     return (
@@ -15,10 +17,12 @@ export default function MenuItem({ title, description, url, thumbPathRelative } 
                 <hr />
                 <span>{description}</span>
             </ContainerMenuTitle>
-            <ContainerThumb>
-                <h1>🗅</h1>
-                <Link to={url}>Ver página</Link>
-            </ContainerThumb>
+            <div>
+                <ContainerThumb>
+                    <img src={thumbPathRelative} alt={title} />
+                </ContainerThumb>
+                <LinkRedirect to={url} label='Ver página' />
+            </div>
         </Container>
     )
 }

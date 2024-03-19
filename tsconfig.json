@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es6",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -8,12 +8,23 @@
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "module": "esnext",
+    // "module": "esnext",
+    "module": "commonjs",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "react"
+    "jsx": "react",
+    "outDir": "dist",
+    "sourceMap": false,
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx"],
-  "exclude": ["node_modules"]
+  "include": ["src/**/*.ts", "tests/**/*.ts", "src/**/*.tsx", "src/declaration.d.ts"],
+  "exclude": ["node_modules", ".vscode"],
+  "baseUrl": ".",
+  "paths": {
+    "@/*": ["src/*"], // Add this line
+    "@components/*": ["src/components"],
+    "@presentation/*": ["src/presentation/*"],
+    "@main/*": ["src/main/*"],
+    "@assets/*": ["src/assets/*"],
+  }
 }
